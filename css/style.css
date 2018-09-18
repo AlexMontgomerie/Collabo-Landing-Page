@@ -59,7 +59,7 @@ body {
 }
 
 h4, h5 {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Cabin', cursive;
   letter-spacing: 1px;
 }
 
@@ -109,7 +109,7 @@ span, a, a:hover {
 
 .bg-gray {
   background: #fafafa;
-  background-image: url(../img/pattern.png);
+  background-image: url(../img/cover.png);
   background-repeat: repeat;
 }
 
