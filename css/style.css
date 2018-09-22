@@ -33,7 +33,7 @@
 	15 Contact
 	16 Footer
 	17 Responsive
- 
+
 
 ---------------------------------------------------------------- */
 /* ----------------------------------------------------------------
@@ -376,7 +376,7 @@ span, a, a:hover {
 }
 
 .logo {
-  width: 120px;
+  width: 200px;
 }
 
 /* ----------------------------------------------------------------
@@ -1462,6 +1462,23 @@ footer p {
   .numbers div[class*='col-']:after {
     display: none;
   }
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+.logo-span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-logo {
+  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -39,17 +39,23 @@ $(function() {
 
         var bodyScroll = wind.scrollTop(),
             navbar = $(".navbar"),
-            logo = $(".navbar .logo> img");
+            logo = $(".navbar-logo"),
+            title = $(".navbar-title");
+            //TODO: change colour of logo
 
         if(bodyScroll > 100){
 
             navbar.addClass("nav-scroll");
-            logo.attr('src', 'img/logo-dark.png');
+            logo.attr('src', 'img/logo.png');
+            title.removeClass("title-white");
+            title.addClass("title-black");
 
         }else{
 
             navbar.removeClass("nav-scroll");
-            logo.attr('src', 'img/logo-light.png');
+            logo.attr('src', 'img/logo-white.png');
+            title.addClass("title-white");
+            title.removeClass("title-black");
         }
     });
 
@@ -66,9 +72,9 @@ $(function() {
 
     wind.on('scroll', function () {
         $(".skill-progress .progres").each(function () {
-            var bottom_of_object = 
+            var bottom_of_object =
             $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = 
+            var bottom_of_window =
             $(window).scrollTop() + $(window).height();
             var myVal = $(this).attr('data-value');
             if(bottom_of_window > bottom_of_object) {
@@ -83,10 +89,10 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ Sections Background Image From Data ]
 -----------------------------------------------------------------*/
-    
+
     var pageSection = $(".bg-img, section");
     pageSection.each(function(indx){
-        
+
         if ($(this).attr("data-background")){
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
@@ -204,7 +210,7 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ magnificPopup ]
 -----------------------------------------------------------------*/
-    
+
     $('.gallery').magnificPopup({
         delegate: '.popimg',
         type: 'image',
@@ -217,14 +223,14 @@ $(function() {
 /* ----------------------------------------------------------------
                 [ YouTubePopUp ]
 -----------------------------------------------------------------*/
-    
+
     $("a.vid").YouTubePopUp();
 
 
 /* ----------------------------------------------------------------
                 [ countUp ]
 -----------------------------------------------------------------*/
-    
+
     $('.numbers .count').countUp({
         delay: 10,
         time: 1500
@@ -242,7 +248,7 @@ $(window).on("load",function (){
 
 /* ----------------------------------------------------------------
                 [ Preloader ]
------------------------------------------------------------------*/    
+-----------------------------------------------------------------*/
 
     $(".loading").fadeOut(500);
 
@@ -257,7 +263,7 @@ $(window).on("load",function (){
 /* ----------------------------------------------------------------
                 [ isotope Portfolio ( Masonery Style ) ]
 -----------------------------------------------------------------*/
-    
+
     $('.gallery').isotope({
       // options
       itemSelector: '.items'
@@ -286,7 +292,7 @@ $(window).on("load",function (){
 /* ----------------------------------------------------------------
                 [ contact form validator ]
 -----------------------------------------------------------------*/
-    
+
     $('#contact-form').validator();
 
     $('#contact-form').on('submit', function (e) {
